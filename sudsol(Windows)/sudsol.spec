@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['sudsol.py'],
-             pathex=['C:\\Users\\suddh\\Desktop\\sudsol'],
+             pathex=['C:\\Users\\suddh\\Documents\\GitHub\\sudoku-solver\\sudsol(Windows)'],
              binaries=[],
              datas=[],
              hiddenimports=[],
