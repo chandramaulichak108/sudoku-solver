@@ -3,13 +3,34 @@ import sys
 from os import system
 from time import sleep
 from threading import Thread
+import textwrap
 
 grid=[]
 
 solved=True
 
+def welcome():
+    sud='''
+    8 0 0 0 0 0 0 0 0
+    0 0 3 6 0 0 0 0 0
+    0 7 0 0 9 0 2 0 0
+    0 5 0 0 0 7 0 0 0
+    0 0 0 0 4 5 7 0 0
+    0 0 0 1 0 0 0 3 0
+    0 0 1 0 0 0 0 6 8
+    0 0 8 5 0 0 0 1 0
+    0 9 0 0 0 0 4 0 0 '''
+    sud=textwrap.dedent(sud).strip()
+    wel='''
+    Welcome to SUDSoL !! you can solve your sudoku here. Infact, a sudoku with multiple solutions can also be solved here as it will give all the answers. This is from Chandramauli Chakraborty, you can reach me through my github account https://github.com/chandramaulichak108. 
+The procedure for entering the sudoku is to input 0 in case of blank spaces, and enter the sudoku grid in this format\n\n{}
+\nSo enjoy !!!
+    '''.format(sud)
+    print(textwrap.dedent(wel).strip())
+
+welcome()
 #system('cls')
-print("Enter the sudoku: ")
+print("\nEnter the sudoku: \n")
 
 ## Animation
 
@@ -75,7 +96,7 @@ def solve():
     done=True
     t.join()
     prnt()
-    ch=input("\nMore? Press [y/n]")
+    ch=input("\nMore? Press [y/n] ")
     if ch=='y' or ch=='yes':
         done=False
         t=Thread(target=animate)
@@ -92,19 +113,11 @@ done=True
 solved=False
 t.join()
 
-ch=input("Enter any key to exit....")
+ch=input("\nEnter any key to exit....")
 exit(1)
 
 '''
-8 0 0 0 0 0 0 0 0
-0 0 3 6 0 0 0 0 0
-0 7 0 0 9 0 2 0 0
-0 5 0 0 0 7 0 0 0
-0 0 0 0 4 5 7 0 0
-0 0 0 1 0 0 0 3 0
-0 0 1 0 0 0 0 6 8
-0 0 8 5 0 0 0 1 0
-0 9 0 0 0 0 4 0 0
+
 5 0 0 9 0 8 0 0 6
 0 0 0 0 6 0 0 0 0
 0 8 6 3 0 5 9 4 0

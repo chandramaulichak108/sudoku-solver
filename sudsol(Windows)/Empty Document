@@ -1,0 +1,4 @@
+Welcome to SUDSoL !!, you can solve your sudoku here. Infact, a sudoku with multiple solutions can also be solved here as it will give all the answers. This is from Chandramauli Chakraborty, you can reach me through my github account https://github.com/chandramaulichak108. 
+The procedure for entering the sudoku is to input 0 in case of blank spaces, and enter the sudoku grid in this format
+    {}
+\nSo enjoy !!!\n
